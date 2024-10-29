@@ -29,6 +29,10 @@
         {
           "name": "user",
           "url": "/user"
+        },
+        {
+          "name":"credit",
+          "url":"/credit"
         }
       ]
     }

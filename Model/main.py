@@ -27,11 +27,41 @@ app.add_middleware(
 
 MODEL = joblib.load("./isolation_forest_model.pkl")
 
+MODEL_USER = joblib.load("./rf_classifier.joblib")
+
+MODEL_CREDIT = joblib.load("./decision_tree_model.joblib")
+
 @app.get("/")
 async def root():
     return {"message": "Hello World"}
 
-@app.post("/predict")
+@app.post("/predict/credit")
+async def predict(formData:list[float]):
+    # print(input)
+    ip = np.array(formData)
+    ip = ip.reshape(1, -1)
+    prediction = MODEL_CREDIT.predict(ip)
+    
+    print(prediction)
+    if(prediction.any()):
+        return {"fraud":1}
+    else:
+        return {"fraud":0}
+
+@app.post("/predict/user")
+async def predict(formData:list[float]):
+    # print(input)
+    ip = np.array(formData)
+    ip = ip.reshape(1, -1)
+    prediction = MODEL_USER.predict(ip)
+    
+    print(prediction)
+    if(prediction.any()):
+        return {"fraud":1}
+    else:
+        return {"fraud":0}
+    
+@app.post("/predict/professional")
 async def predict(formData:list[float]):
     # print(input)
     ip = np.array(formData)
@@ -39,7 +69,7 @@ async def predict(formData:list[float]):
     prediction = MODEL.predict(ip)
     
     print(prediction)
-    if(ip.any( )):
-        return {"fraud":"true"}
+    if(prediction.any( )):
+        return {"fraud":1}
     else:
-        return {"fraud":"false"}
+        return {"fraud":0}

@@ -26,7 +26,7 @@ const Spam = () => {
     // console.log(`type of formdata ${formData.input} type of data ${formData}`);
 
     axios
-      .post("http://127.0.0.1:8000/predict", input)
+      .post("http://127.0.0.1:8000/predict/professional", input)
       .then((response) => {
         console.log("lucky");
         console.log(response.data);

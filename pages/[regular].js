@@ -6,6 +6,7 @@ import Default from "@layouts/Default";
 import { getRegularPage, getSinglePage } from "@lib/contentParser";
 import FraudProfessional from "@layouts/FraudProfessional";
 import FraudUser from "@layouts/FraudUser";
+import FraudCredit from "@layouts/FraudCredit";
 
 // for all regular pages
 const RegularPages = ({ data }) => {
@@ -32,6 +33,8 @@ const RegularPages = ({ data }) => {
         <FraudProfessional />
       ) : layout === "user" ? (
         <FraudUser />
+      ) : layout === "credit" ? (
+        <FraudCredit />
       ) : (
         <Default data={data} />
       )}
