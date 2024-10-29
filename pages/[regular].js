@@ -4,7 +4,7 @@ import Base from "@layouts/Baseof";
 import Contact from "@layouts/Contact";
 import Default from "@layouts/Default";
 import { getRegularPage, getSinglePage } from "@lib/contentParser";
-import Spam from "@layouts/Spam";
+import Fraud from "@layouts/Fraud";
 
 // for all regular pages
 const RegularPages = ({ data }) => {
@@ -28,7 +28,7 @@ const RegularPages = ({ data }) => {
       ) : layout === "contact" ? (
         <Contact data={data} />
       ) : layout === "fraud" ? (
-        <Spam />
+        <Fraud />
       ) : (
         <Default data={data} />
       )}

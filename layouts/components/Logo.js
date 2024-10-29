@@ -12,7 +12,13 @@ const Logo = ({ src }) => {
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
 
-  return <>Vigilance 360</>;
+  return (
+    <>
+      <div className="text-2xl font-black tracking-widest antialiased">
+        Vigilance 360
+      </div>
+    </>
+  );
 
   <Link href="/" className="navbar-brand">
     {src || logo ? (
