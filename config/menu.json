@@ -6,11 +6,6 @@
       "name": "Home",
       "url": "/"
     },
-    
-    {
-      "name": "Fraud Detection",
-      "url": "/fraud"
-    },
     {
       "name": "Pages",
       "url": "",
@@ -21,6 +16,21 @@
           "url": "/categories"
         }
       ]
+    },
+    {
+      "name": "Fraud Detection",
+      "url": "/fraud",
+      "hasChildren": true,
+      "children": [
+        {
+          "name": "professional",
+          "url": "/professional"
+        },
+        {
+          "name": "user",
+          "url": "/user"
+        }
+      ]
     }
   ],
   "footer": [
@@ -29,16 +39,17 @@
       "url": "/"
     },
     {
-      "name": "About",
-      "url": "/about"
-    },
-    {
       "name": "Contact",
       "url": "/contact"
-    },
-    {
+      },
+      {
       "name": "Privacy Policy",
       "url": "#"
-    }
+      }
+      ,
+      {
+      "name": "About",
+      "url": "/about"
+      }
   ]
 }

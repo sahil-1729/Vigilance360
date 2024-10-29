@@ -4,7 +4,8 @@ import Base from "@layouts/Baseof";
 import Contact from "@layouts/Contact";
 import Default from "@layouts/Default";
 import { getRegularPage, getSinglePage } from "@lib/contentParser";
-import Fraud from "@layouts/Fraud";
+import FraudProfessional from "@layouts/FraudProfessional";
+import FraudUser from "@layouts/FraudUser";
 
 // for all regular pages
 const RegularPages = ({ data }) => {
@@ -27,8 +28,10 @@ const RegularPages = ({ data }) => {
         <About data={data} />
       ) : layout === "contact" ? (
         <Contact data={data} />
-      ) : layout === "fraud" ? (
-        <Fraud />
+      ) : layout === "professional" ? (
+        <FraudProfessional />
+      ) : layout === "user" ? (
+        <FraudUser />
       ) : (
         <Default data={data} />
       )}

@@ -10,7 +10,7 @@ import Link from "next/link";
 const Footer = () => {
   const { copyright, footer_content } = config.params;
   return (
-    <footer className="section relative mt-12 pt-[70px] pb-[50px]">
+    <footer className="section relative mt-12 pb-[50px] pt-[70px]">
       <ImageFallback
         className="-z-[1] object-cover object-left  md:object-top"
         src="/images/footer-bg-shape.svg"
@@ -37,11 +37,11 @@ const Footer = () => {
           ))}
         </ul>
         {/* social icons */}
-        <div className="inline-flex">
+        {/* <div className="inline-flex">
           <Social source={social} className="socials mb-12 justify-center" />
-        </div>
+        </div> */}
         {/* copyright */}
-        {markdownify(copyright, "p")}
+        {/* {markdownify(copyright, "p")} */}
       </div>
     </footer>
   );

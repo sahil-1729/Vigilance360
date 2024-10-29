@@ -2,7 +2,7 @@
 title: About The Author
 image: /images/author.png
 description: "meta description"
-layout: fraud
+layout: user
 education:
   title: Formal Education
   degrees:
